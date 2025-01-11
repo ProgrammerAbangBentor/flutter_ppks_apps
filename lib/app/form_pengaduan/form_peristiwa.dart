@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppks_apps/pages/form_terlapor.dart';
+import 'package:flutter_ppks_apps/app/form_pengaduan/form_terlapor.dart';
 
 class FormPeristiwaPage extends StatelessWidget {
   const FormPeristiwaPage({super.key});

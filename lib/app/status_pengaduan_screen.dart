@@ -1,8 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ppks_apps/pages/dashboard_page.dart';
-import 'package:flutter_ppks_apps/pages/form_pengaduan.dart';
-import 'package:flutter_ppks_apps/pages/profile_secreen.dart';
+import 'package:flutter_ppks_apps/app/dashboard_page.dart';
+import 'package:flutter_ppks_apps/app/form_pengaduan/form_pengaduan.dart';
+import 'package:flutter_ppks_apps/app/profile_secreen.dart';
 
 
 class StatusPengaduanScreen extends StatefulWidget {
@@ -45,23 +45,23 @@ class _StatusPengaduanScreenState extends State<StatusPengaduanScreen> {
           children: [
             const Text(
               'Ditingkatkan',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             const SizedBox(height: 10),
             // Grafik sparkline menggunakan LineChart dari fl_chart
             SizedBox(
-              height: 150,
+              height: 350,
               child: LineChart(
                 LineChartData(
                   lineBarsData: [
                     LineChartBarData(
                       isCurved: true,
-                      color: Colors.blue,
-                      dotData: FlDotData(show: false),
+                      color: const Color.fromARGB(255, 10, 10, 10),
+                      dotData: FlDotData(show: true),
                       spots: dataPoints,
                       belowBarData: BarAreaData(
                         show: true,
-                        color: Colors.blue.withOpacity(0.3),
+                        color: const Color.fromARGB(255, 3, 3, 3).withOpacity(0.3),
                       ),
                     ),
                   ],
@@ -71,16 +71,16 @@ class _StatusPengaduanScreenState extends State<StatusPengaduanScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 50),
             const Text(
               'Laporan Status',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             const SizedBox(height: 10),
             // Tambahkan widget lainnya untuk menampilkan laporan status
             const Text(
-              'Jumlah laporan meningkat 20% dibandingkan bulan lalu.',
-              style: TextStyle(fontSize: 14),
+              'Laporan Anda Sudah masuk Ke tahap Penetapan Hukuman Tersangka.',
+              style: TextStyle(fontSize: 15),
             ),
           ],
         ),

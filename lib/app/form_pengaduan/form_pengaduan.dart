@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppks_apps/pages/dashboard_page.dart';
-import 'package:flutter_ppks_apps/pages/form_peristiwa.dart';
+import 'package:flutter_ppks_apps/app/form_pengaduan/form_peristiwa.dart';
 
 class FormPengaduanPage extends StatelessWidget {
   const FormPengaduanPage({super.key});
