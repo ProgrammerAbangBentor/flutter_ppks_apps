@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ppks_apps/core/services/auth_service.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginViewModel extends ChangeNotifier {
   final AuthService _authService = AuthService();
@@ -23,6 +24,7 @@ class LoginViewModel extends ChangeNotifier {
         (error) => {'status': false, 'message': error.toString()},
         (data)  {
           _userName = data.name;
+          _saveToken(data.token);
           notifyListeners();
           return {'status': true, 'data': data};
         },
@@ -33,4 +35,10 @@ class LoginViewModel extends ChangeNotifier {
       setLoading(false);
     }
   }
+
+  Future<void> _saveToken(String token) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('token', token);
+  }
 }
+

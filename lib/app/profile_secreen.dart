@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ppks_apps/app/dashboard_page.dart';
-import 'package:flutter_ppks_apps/app/form_pengaduan/form_pengaduan.dart';
+import 'package:flutter_ppks_apps/app/form_pengaduan/FormPengaduanScreen.dart';
 import 'package:flutter_ppks_apps/app/status_pengaduan_screen.dart';
 import 'package:flutter_ppks_apps/core/models/login_view_model.dart';
 import 'package:flutter_ppks_apps/core/models/logout_view_model.dart';
@@ -101,7 +101,7 @@ class ProfileScreen extends StatelessWidget {
               case 1:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const FormPengaduanPage()),
+                  MaterialPageRoute(builder: (context) => FormPengaduanScreen()),
                 );
                 break;
               case 2:

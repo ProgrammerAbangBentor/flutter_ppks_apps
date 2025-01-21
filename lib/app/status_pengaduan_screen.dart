@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ppks_apps/app/dashboard_page.dart';
-import 'package:flutter_ppks_apps/app/form_pengaduan/form_pengaduan.dart';
+import 'package:flutter_ppks_apps/app/form_pengaduan/FormPengaduanScreen.dart';
 import 'package:flutter_ppks_apps/app/profile_secreen.dart';
 
 
@@ -116,7 +116,7 @@ class _StatusPengaduanScreenState extends State<StatusPengaduanScreen> {
               case 1:
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const FormPengaduanPage()),
+                  MaterialPageRoute(builder: (context) => FormPengaduanScreen()),
                 );
                 break;
               case 2:

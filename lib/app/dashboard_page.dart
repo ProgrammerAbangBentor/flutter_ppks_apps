@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ppks_apps/app/form_pengaduan/form_pengaduan.dart';
+import 'package:flutter_ppks_apps/app/form_pengaduan/FormPengaduanScreen.dart';
 import 'package:flutter_ppks_apps/app/profile_secreen.dart';
 import 'package:flutter_ppks_apps/app/status_pengaduan_screen.dart';
 import 'package:flutter_ppks_apps/core/models/login_view_model.dart';
@@ -40,7 +40,7 @@ class DashboardPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const FormPengaduanPage()),
+                        builder: (context) => FormPengaduanScreen()),
                   );
                   print('Buat Pengaduan');
                 },
@@ -94,7 +94,7 @@ class DashboardPage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const FormPengaduanPage()),
+                      builder: (context) => FormPengaduanScreen()),
                 );
                 break;
               case 2:
